@@ -1,13 +1,18 @@
-#include "Point.h"
+#include "point.h"
 #include <iostream>
 using namespace std;
 
-int main(){
-    Point a(4,5);
-    cout<<"Point A:"<<a.getX()<<","<<a.getY();
-    Point::showCount();
-    Point b(a);
-    cout<<"Point B:"<<b.getX()<<","<<b.getY();
-    Point::showCount();
-    return 0;
+Point::Point():x(0),y(0){
+    cout<<"Default Constructor called."<<endl;
+}
+Point::Point(int x,int y):x(x),y(y){
+    cout<<"Constructor called."<<endl;
+}
+Point::~Point(){
+    cout<<"Destructor called."<<endl;
+}
+void Point::move(int newX,int newY){
+    cout<<"Moving the point to("<<newX<<","<<newY<<")"<<endl;
+    x=newX;
+    y=newY;
 }
