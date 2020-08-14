@@ -13,21 +13,21 @@ string add(string a,string b){
     if(len_a>=len_b){
         len_c=len_a;
         for(int k=0;k<len_a-len_b;k++)
-            b+='0';
+            b="0"+b;
     }else{
         len_c=len_b;
         for(int k=0;k<len_b-len_a;k++)
-            a+='0';
+            a="0"+a;
     }
     for(int i=len_c-1;i>=0;i--)
     {
         temp=a[i]-'0'+b[i]-'0'+carry;
         carry=temp/10;
         temp=temp%10;
-        c+=char(temp+'0');
+        c=char(temp+'0')+c;
         }	
     if(carry!=0)
-    c+=char(carry+'0');
+    c=char(carry+'0')+c;
 
     return c;
 }
