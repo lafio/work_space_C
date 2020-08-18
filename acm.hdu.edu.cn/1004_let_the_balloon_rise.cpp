@@ -3,7 +3,7 @@
 using namespace std;
 
 vector<string> popular(){
-    int count,a,max_index;
+    int count,a,max_index,max=0;
     string c,n,x;
     vector<string> color,result;
     vector<int> number;
@@ -23,9 +23,9 @@ vector<string> popular(){
                 number.push_back(a);
             }
             for(int i=0;i<number.size();i++){
-                for(int j=i;j<number.size();j++){
-                    if(number[i]>=number[j])
-                        max_index=i;
+                if(number[i]>=max){
+                    max==number[i];
+                    max_index=i;
                 }
             }
             //cout<<color[max_index]<<endl;
