@@ -10,5 +10,5 @@
         "initializer_list": "cpp",
         "ostream": "cpp"
     },
-    "timeline.excludeSources": []
+    "timeline.excludeSources": ["include/"]
 }
